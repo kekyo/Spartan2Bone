@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -2880,6 +2880,13 @@
 <text x="-7.2644" y="9.1186" size="2.0828" layer="95" ratio="6" rot="SR0">&gt;Name</text>
 <text x="-7.8994" y="6.5786" size="2.0828" layer="96" ratio="6" rot="SR0">&gt;Value</text>
 </symbol>
+<symbol name="VCCO">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<text x="-0.508" y="0.254" size="0.8128" layer="94">O</text>
+<pin name="VCCO" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="XC2S30-5VQG100C">
@@ -3336,6 +3343,19 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="VCCO" prefix="VCC">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VCCO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -3354,13 +3374,6 @@
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="VCCIO">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<text x="-0.508" y="0.254" size="0.8128" layer="94">IO</text>
-<pin name="VCCIO" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="VCCINT">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
@@ -3374,19 +3387,6 @@
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCCIO" prefix="VCC">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="VCCIO" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -15207,8 +15207,8 @@ W = angled&lt;p&gt;
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="VCCO" library="supply1" deviceset="VCCIO" device="" value="VCCO"/>
-<part name="VCCO1" library="supply1" deviceset="VCCIO" device="" value="VCCO"/>
+<part name="VCCO" library="Spartan2Bone" deviceset="VCCO" device="" value="VCCO"/>
+<part name="VCCO1" library="Spartan2Bone" deviceset="VCCO" device="" value="VCCO"/>
 <part name="VCC1" library="supply1" deviceset="VCCINT" device=""/>
 <part name="VCC2" library="supply1" deviceset="VCCINT" device=""/>
 <part name="VCC3" library="supply1" deviceset="VCCINT" device=""/>
@@ -15227,11 +15227,11 @@ W = angled&lt;p&gt;
 <part name="R2" library="resistor" deviceset="R-US_" device="0204/5" value="4.7k"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="0204/5" value="4.7k"/>
 <part name="CN1" library="con-lsta" deviceset="FE17-2" device=""/>
-<part name="VCCO2" library="supply1" deviceset="VCCIO" device="" value="VCCO"/>
+<part name="VCCO2" library="Spartan2Bone" deviceset="VCCO" device="" value="VCCO"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="SV2" library="con-lsta" deviceset="FE13-2" device=""/>
 <part name="POWER" library="jumper" deviceset="JP2E" device=""/>
-<part name="VCCO3" library="supply1" deviceset="VCCIO" device="" value="VCCO"/>
+<part name="VCCO3" library="Spartan2Bone" deviceset="VCCO" device="" value="VCCO"/>
 <part name="C6" library="resistor" deviceset="CPOL-US" device="E2.5-5" value="100uF"/>
 <part name="C7" library="resistor" deviceset="CPOL-US" device="E2.5-5" value="100uF"/>
 <part name="C8" library="resistor" deviceset="C-US" device="050-024X044" value="0.1uF"/>
@@ -15651,69 +15651,9 @@ W = angled&lt;p&gt;
 </net>
 <net name="VCCO" class="0">
 <segment>
-<pinref part="IC01" gate="A" pin="VCCO_5"/>
-<wire x1="289.56" y1="83.82" x2="256.54" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="83.82" x2="256.54" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="VCCO" gate="G$1" pin="VCCIO"/>
-<pinref part="IC01" gate="A" pin="VCCO_4"/>
-<wire x1="256.54" y1="96.52" x2="256.54" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="106.68" x2="256.54" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="116.84" x2="256.54" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="124.46" x2="256.54" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="134.62" x2="256.54" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="144.78" x2="256.54" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="160.02" x2="256.54" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="170.18" x2="256.54" y2="180.34" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="180.34" x2="256.54" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="190.5" x2="256.54" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="200.66" x2="256.54" y2="284.48" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="116.84" x2="289.56" y2="116.84" width="0.1524" layer="91"/>
-<junction x="256.54" y="116.84"/>
-<pinref part="IC01" gate="A" pin="VCCO_3"/>
-<wire x1="256.54" y1="144.78" x2="289.56" y2="144.78" width="0.1524" layer="91"/>
-<junction x="256.54" y="144.78"/>
-<pinref part="IC01" gate="A" pin="VCCO_2"/>
-<wire x1="256.54" y1="180.34" x2="289.56" y2="180.34" width="0.1524" layer="91"/>
-<junction x="256.54" y="180.34"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="256.54" y1="83.82" x2="256.54" y2="71.12" width="0.1524" layer="91"/>
-<junction x="256.54" y="83.82"/>
-<pinref part="IC01" gate="A" pin="I/O_VREF_2"/>
-<wire x1="256.54" y1="71.12" x2="256.54" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="200.66" x2="289.56" y2="200.66" width="0.1524" layer="91"/>
-<junction x="256.54" y="200.66"/>
-<pinref part="IC01" gate="A" pin="I/O_VREF_3"/>
-<wire x1="256.54" y1="190.5" x2="289.56" y2="190.5" width="0.1524" layer="91"/>
-<junction x="256.54" y="190.5"/>
-<pinref part="IC01" gate="A" pin="I/O_VREF_4"/>
-<wire x1="289.56" y1="170.18" x2="256.54" y2="170.18" width="0.1524" layer="91"/>
-<junction x="256.54" y="170.18"/>
-<pinref part="IC01" gate="A" pin="I/O_VREF_5"/>
-<wire x1="289.56" y1="160.02" x2="256.54" y2="160.02" width="0.1524" layer="91"/>
-<junction x="256.54" y="160.02"/>
-<pinref part="IC01" gate="A" pin="I/O_VREF_6"/>
-<wire x1="289.56" y1="134.62" x2="256.54" y2="134.62" width="0.1524" layer="91"/>
-<junction x="256.54" y="134.62"/>
-<pinref part="IC01" gate="A" pin="I/O_VREF_7"/>
-<wire x1="289.56" y1="124.46" x2="256.54" y2="124.46" width="0.1524" layer="91"/>
-<junction x="256.54" y="124.46"/>
-<pinref part="IC01" gate="A" pin="I/O_VREF_8"/>
-<wire x1="289.56" y1="106.68" x2="256.54" y2="106.68" width="0.1524" layer="91"/>
-<junction x="256.54" y="106.68"/>
-<pinref part="IC01" gate="A" pin="I/O_VREF_9"/>
-<wire x1="289.56" y1="96.52" x2="256.54" y2="96.52" width="0.1524" layer="91"/>
-<junction x="256.54" y="96.52"/>
-<pinref part="C11" gate="G$1" pin="1"/>
-<wire x1="266.7" y1="66.04" x2="266.7" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="71.12" x2="256.54" y2="71.12" width="0.1524" layer="91"/>
-<junction x="256.54" y="71.12"/>
-</segment>
-</net>
-<net name="VCCIO" class="0">
-<segment>
 <pinref part="IC01" gate="A" pin="VCCO_7"/>
 <wire x1="337.82" y1="147.32" x2="370.84" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="VCCO1" gate="G$1" pin="VCCIO"/>
+<pinref part="VCCO1" gate="G$1" pin="VCCO"/>
 <wire x1="370.84" y1="147.32" x2="370.84" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="IC01" gate="A" pin="VCCO_8"/>
 <wire x1="370.84" y1="162.56" x2="370.84" y2="172.72" width="0.1524" layer="91"/>
@@ -15769,7 +15709,7 @@ W = angled&lt;p&gt;
 <junction x="370.84" y="71.12"/>
 </segment>
 <segment>
-<pinref part="VCCO2" gate="G$1" pin="VCCIO"/>
+<pinref part="VCCO2" gate="G$1" pin="VCCO"/>
 <wire x1="93.98" y1="284.48" x2="93.98" y2="243.84" width="0.1524" layer="91"/>
 <pinref part="CN1" gate="G$1" pin="9"/>
 <wire x1="93.98" y1="243.84" x2="114.3" y2="243.84" width="0.1524" layer="91"/>
@@ -15795,7 +15735,7 @@ W = angled&lt;p&gt;
 <wire x1="93.98" y1="160.02" x2="114.3" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="VCCO3" gate="G$1" pin="VCCIO"/>
+<pinref part="VCCO3" gate="G$1" pin="VCCO"/>
 <pinref part="POWER" gate="1" pin="2"/>
 <wire x1="7.62" y1="284.48" x2="7.62" y2="259.08" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="259.08" x2="7.62" y2="236.22" width="0.1524" layer="91"/>
@@ -15817,6 +15757,64 @@ W = angled&lt;p&gt;
 <junction x="7.62" y="259.08"/>
 <label x="-10.16" y="215.9" size="1.778" layer="95"/>
 <label x="-10.16" y="259.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC01" gate="A" pin="VCCO_5"/>
+<wire x1="289.56" y1="83.82" x2="256.54" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="83.82" x2="256.54" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="VCCO" gate="G$1" pin="VCCO"/>
+<pinref part="IC01" gate="A" pin="VCCO_4"/>
+<wire x1="256.54" y1="96.52" x2="256.54" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="106.68" x2="256.54" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="116.84" x2="256.54" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="124.46" x2="256.54" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="134.62" x2="256.54" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="144.78" x2="256.54" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="160.02" x2="256.54" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="170.18" x2="256.54" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="180.34" x2="256.54" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="190.5" x2="256.54" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="200.66" x2="256.54" y2="284.48" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="116.84" x2="289.56" y2="116.84" width="0.1524" layer="91"/>
+<junction x="256.54" y="116.84"/>
+<pinref part="IC01" gate="A" pin="VCCO_3"/>
+<wire x1="256.54" y1="144.78" x2="289.56" y2="144.78" width="0.1524" layer="91"/>
+<junction x="256.54" y="144.78"/>
+<pinref part="IC01" gate="A" pin="VCCO_2"/>
+<wire x1="256.54" y1="180.34" x2="289.56" y2="180.34" width="0.1524" layer="91"/>
+<junction x="256.54" y="180.34"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="256.54" y1="83.82" x2="256.54" y2="71.12" width="0.1524" layer="91"/>
+<junction x="256.54" y="83.82"/>
+<pinref part="IC01" gate="A" pin="I/O_VREF_2"/>
+<wire x1="256.54" y1="71.12" x2="256.54" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="200.66" x2="289.56" y2="200.66" width="0.1524" layer="91"/>
+<junction x="256.54" y="200.66"/>
+<pinref part="IC01" gate="A" pin="I/O_VREF_3"/>
+<wire x1="256.54" y1="190.5" x2="289.56" y2="190.5" width="0.1524" layer="91"/>
+<junction x="256.54" y="190.5"/>
+<pinref part="IC01" gate="A" pin="I/O_VREF_4"/>
+<wire x1="289.56" y1="170.18" x2="256.54" y2="170.18" width="0.1524" layer="91"/>
+<junction x="256.54" y="170.18"/>
+<pinref part="IC01" gate="A" pin="I/O_VREF_5"/>
+<wire x1="289.56" y1="160.02" x2="256.54" y2="160.02" width="0.1524" layer="91"/>
+<junction x="256.54" y="160.02"/>
+<pinref part="IC01" gate="A" pin="I/O_VREF_6"/>
+<wire x1="289.56" y1="134.62" x2="256.54" y2="134.62" width="0.1524" layer="91"/>
+<junction x="256.54" y="134.62"/>
+<pinref part="IC01" gate="A" pin="I/O_VREF_7"/>
+<wire x1="289.56" y1="124.46" x2="256.54" y2="124.46" width="0.1524" layer="91"/>
+<junction x="256.54" y="124.46"/>
+<pinref part="IC01" gate="A" pin="I/O_VREF_8"/>
+<wire x1="289.56" y1="106.68" x2="256.54" y2="106.68" width="0.1524" layer="91"/>
+<junction x="256.54" y="106.68"/>
+<pinref part="IC01" gate="A" pin="I/O_VREF_9"/>
+<wire x1="289.56" y1="96.52" x2="256.54" y2="96.52" width="0.1524" layer="91"/>
+<junction x="256.54" y="96.52"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<wire x1="266.7" y1="66.04" x2="266.7" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="71.12" x2="256.54" y2="71.12" width="0.1524" layer="91"/>
+<junction x="256.54" y="71.12"/>
 </segment>
 </net>
 <net name="VCCINT" class="0">
