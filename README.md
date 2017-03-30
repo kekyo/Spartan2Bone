@@ -17,6 +17,10 @@
 
 TODO:
 
+## Pre render output
+
+![Spartan2Bone schematic](Spartan2BoneSchematic.png)
+
 ## LICENSE
 
 * Schematic, artwork and documents: [Under CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
