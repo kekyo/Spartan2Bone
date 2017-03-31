@@ -15353,8 +15353,8 @@ W = angled&lt;p&gt;
 <wire x1="93.98" y1="45.72" x2="93.98" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="IC02" gate="A" pin="!CE"/>
 <wire x1="93.98" y1="63.5" x2="101.6" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="86.36" x2="182.88" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="165.1" y1="86.36" x2="182.88" y2="86.36" width="0.1524" layer="91"/>
 <junction x="182.88" y="86.36"/>
 <label x="93.98" y="63.5" size="1.778" layer="95"/>
 </segment>
@@ -15531,11 +15531,11 @@ W = angled&lt;p&gt;
 <wire x1="233.68" y1="58.42" x2="233.68" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="50.8" x2="243.84" y2="50.8" width="0.1524" layer="91"/>
 <junction x="279.4" y="50.8"/>
-<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="50.8" x2="256.54" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="50.8" x2="266.7" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="266.7" y1="50.8" x2="279.4" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="66.04" x2="256.54" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="58.42" x2="256.54" y2="50.8" width="0.1524" layer="91"/>
 <junction x="256.54" y="50.8"/>
 <pinref part="C10" gate="G$1" pin="1"/>
 <wire x1="243.84" y1="66.04" x2="243.84" y2="50.8" width="0.1524" layer="91"/>
@@ -15606,12 +15606,12 @@ W = angled&lt;p&gt;
 <wire x1="25.4" y1="195.58" x2="7.62" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="200.66" x2="25.4" y2="195.58" width="0.1524" layer="91"/>
 <junction x="25.4" y="195.58"/>
-<pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="48.26" y1="200.66" x2="48.26" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="48.26" y1="208.28" x2="48.26" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="195.58" x2="35.56" y2="195.58" width="0.1524" layer="91"/>
 <junction x="35.56" y="195.58"/>
-<pinref part="C9" gate="G$1" pin="2"/>
-<wire x1="58.42" y1="200.66" x2="58.42" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="208.28" x2="58.42" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="195.58" x2="48.26" y2="195.58" width="0.1524" layer="91"/>
 <junction x="48.26" y="195.58"/>
 <wire x1="58.42" y1="195.58" x2="71.12" y2="195.58" width="0.1524" layer="91"/>
@@ -15747,8 +15747,8 @@ W = angled&lt;p&gt;
 <junction x="7.62" y="215.9"/>
 <wire x1="25.4" y1="215.9" x2="48.26" y2="215.9" width="0.1524" layer="91"/>
 <junction x="25.4" y="215.9"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="215.9" x2="48.26" y2="208.28" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="48.26" y1="215.9" x2="48.26" y2="200.66" width="0.1524" layer="91"/>
 <pinref part="IC03" gate="A" pin="IN"/>
 <wire x1="7.62" y1="236.22" x2="20.32" y2="236.22" width="0.1524" layer="91"/>
 <junction x="7.62" y="236.22"/>
@@ -15783,11 +15783,11 @@ W = angled&lt;p&gt;
 <pinref part="IC01" gate="A" pin="VCCO_2"/>
 <wire x1="256.54" y1="180.34" x2="289.56" y2="180.34" width="0.1524" layer="91"/>
 <junction x="256.54" y="180.34"/>
-<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="256.54" y1="83.82" x2="256.54" y2="71.12" width="0.1524" layer="91"/>
 <junction x="256.54" y="83.82"/>
 <pinref part="IC01" gate="A" pin="I/O_VREF_2"/>
-<wire x1="256.54" y1="71.12" x2="256.54" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="71.12" x2="256.54" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="200.66" x2="289.56" y2="200.66" width="0.1524" layer="91"/>
 <junction x="256.54" y="200.66"/>
 <pinref part="IC01" gate="A" pin="I/O_VREF_3"/>
@@ -15886,8 +15886,8 @@ W = angled&lt;p&gt;
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="157.48" y1="66.04" x2="157.48" y2="81.28" width="0.1524" layer="91"/>
 <junction x="157.48" y="81.28"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="165.1" y1="86.36" x2="157.48" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="86.36" x2="157.48" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="VCC4" gate="G$1" pin="VCCINT"/>
@@ -15916,8 +15916,8 @@ W = angled&lt;p&gt;
 <wire x1="35.56" y1="218.44" x2="35.56" y2="208.28" width="0.1524" layer="91"/>
 <junction x="35.56" y="218.44"/>
 <wire x1="35.56" y1="218.44" x2="58.42" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="218.44" x2="58.42" y2="208.28" width="0.1524" layer="91"/>
+<pinref part="C9" gate="G$1" pin="2"/>
+<wire x1="58.42" y1="218.44" x2="58.42" y2="200.66" width="0.1524" layer="91"/>
 <pinref part="PCONF" gate="1" pin="2"/>
 <wire x1="15.24" y1="256.54" x2="-10.16" y2="256.54" width="0.1524" layer="91"/>
 <junction x="15.24" y="256.54"/>
