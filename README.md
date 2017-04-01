@@ -27,6 +27,7 @@ TODO:
 ## Pre render output
 
 ![Spartan2Bone schematic](Spartan2BoneSchematic.png)
+![Spartan2Bone board design](Spartan2BoneBoard.png)
 
 ## LICENSE
 
