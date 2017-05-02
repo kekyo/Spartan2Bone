@@ -1,0 +1,14 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -u 0 ledbrink.bit -o ledbrink.mcs 
+
+PROM ledbrink.prm map: Tue May 02 19:42:05 2017
+
+Format        Mcs86 (32-bit)
+Size          64K
+PROM start    0000:0000
+PROM end      0000:ffff
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0000:a46f     May 02 19:41:51 2017 ledbrink.bit
