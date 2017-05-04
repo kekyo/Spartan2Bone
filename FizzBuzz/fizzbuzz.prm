@@ -3,7 +3,7 @@ Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 promgen -w -u 0 fizzbuzz.bit -o fizzbuzz.mcs 
 
-PROM fizzbuzz.prm map: Thu May 04 23:29:02 2017
+PROM fizzbuzz.prm map: Fri May 05 00:08:06 2017
 
 Format        Mcs86 (32-bit)
 Size          64K
@@ -11,4 +11,4 @@ PROM start    0000:0000
 PROM end      0000:ffff
 
         Addr1        Addr2                     Date File(s)
-    0000:0000    0000:a46f     May 04 23:27:52 2017 fizzbuzz.bit
+    0000:0000    0000:a46f     May 05 00:04:52 2017 fizzbuzz.bit
