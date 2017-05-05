@@ -26,8 +26,48 @@ TODO:
 
 ## Pre render output
 
-![Spartan2Bone schematic](Spartan2BoneSchematic.png)
-![Spartan2Bone board design](Spartan2BoneBoard.png)
+![Spartan2Bone schematic](Images/Spartan2BoneSchematic.png)
+![Spartan2Bone board design](Images/Spartan2BoneBoard.png)
+
+## How to create Spartan2Bone
+
+* Order and get Spartan2Bone PCB.
+
+![Spartan2Bone PCB](Images/IMG_20170419_210324.jpg)
+
+* Order and get required parts (TODO: parts list)
+
+![Spartan2Bone parts (TODO: parts list)](Images/IMG_20170419_211524.jpg)
+
+* Solder Spartan-II
+  * Caution!! You must looks direction for Spartan-II! If you missed, repair too hard.
+
+![Solder Spartan-II (Use 3M Scotch 230 Drafting Tape)](Images/IMG_20170419_221014.jpg)
+![Solder Spartan-II (Use Flux)](Images/IMG_20170419_221516.jpg)
+
+* Solder configuration flash ROM
+  * Caution direction too.
+
+![Solder configuration flash ROM (Use 3M Scotch 230 Drafting Tape)](Images/IMG_20170419_222002.jpg)
+![Solder configuration flash ROM (Use Flux)](Images/IMG_20170419_222314.jpg)
+
+* Cleaning by Flux remover.
+
+![Results](Images/IMG_20170419_222627.jpg)
+
+* Solder other parts.
+
+![Final results](Images/IMG_20170419_231124.jpg)
+
+## Sample codes
+
+### LedBrink
+
+* [Sample for simple LED brink code. (Require Xilinx ISE 10.1)](LedBrink/)
+
+### FizzBuzz
+
+* [Sample for FizzBuzz by VerilogHDL. Output by 7seg LED and two Fizz-Buzz LEDs. (Require Xilinx ISE 10.1)](FizzBuzz/)
 
 ## LICENSE
 
