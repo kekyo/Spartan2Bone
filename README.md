@@ -65,9 +65,13 @@ TODO:
 
 * [Sample for simple LED brink code. (Require Xilinx ISE 10.1)](LedBrink/)
 
+![Sample for simple LED brink.](Images/VID_20170502_194346.mp4)
+
 ### FizzBuzz
 
 * [Sample for FizzBuzz by VerilogHDL. Output by 7seg LED and two Fizz-Buzz LEDs. (Require Xilinx ISE 10.1)](FizzBuzz/)
+
+![Sample for FizzBuzz.](Images/VID_20170505_000948.mp4)
 
 ## LICENSE
 
